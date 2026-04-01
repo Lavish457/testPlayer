@@ -10,8 +10,12 @@ def get_full_video(video_id):
 
     ydl_opts = {
         'quiet': True,
-        'no_warnings': True,
+    'no_warnings': True,
+    'http_headers': {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
     }
+    }
+
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
