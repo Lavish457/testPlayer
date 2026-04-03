@@ -12,7 +12,7 @@ PORT = int(os.environ.get("PORT", 8000))
 BASE_URL = os.environ.get("BASE_URL", "https://your-app-name.onrender.com")
 
 class VideoHandler(BaseHTTPRequestHandler):
-    timeout = 35
+    timeout = 90
 
     def do_GET(self):
         try:
@@ -57,7 +57,7 @@ Example:
                 }
             },
             'format': 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best',
-            'socket_timeout': 30,
+            'socket_timeout': 6,
         }
 
         try:
